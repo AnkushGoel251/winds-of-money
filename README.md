@@ -127,7 +127,16 @@ flowchart LR
 ---
 
 ## Screenshots / Prototype
-- Include a screenshot or GIF of your frontend prototype with loader, charts, and news list.
+
+### Screenshots
+![App Screenshot 1](ScreenShots%20and%20Demo%20video/app%20ss1.png)
+![App Screenshot 2](ScreenShots%20and%20Demo%20video/app%20ss%202.png)
+
+### Demo Video
+
+https://github.com/user-attachments/assets/5c813e91-7857-4184-b9cb-a3106a57e5ae
+
+
 
 ---
 
