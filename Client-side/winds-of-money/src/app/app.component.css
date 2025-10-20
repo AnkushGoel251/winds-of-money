@@ -1,0 +1,40 @@
+.app-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  color: white;
+  background-color: #0f111a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,0,0.2);
+}
+
+.app-title {
+  text-align: center;
+  color: #ffff;
+  font-size: 2.8rem;
+  margin: 0px;
+}
+
+.app-sub-title {
+  text-align: center;
+  color: gray;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.app-logo {
+  height: 70px; /* adjust size as needed */
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}

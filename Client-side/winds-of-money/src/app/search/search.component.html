@@ -1,0 +1,52 @@
+<!-- Search Bar -->
+<div class="search-bar">
+  <input [(ngModel)]="symbol" placeholder="Enter stock symbol (e.g. TCS)" />
+  <button (click)="search()">Search</button>
+</div>
+
+<!-- Loader -->
+<div *ngIf="loading" class="loader-container">
+  <div class="loader">
+    <div></div><div></div><div></div>
+  </div>
+  <p>Analyzing market data...</p>
+</div>
+
+<!-- Error Message -->
+<div *ngIf="error" class="error">{{error}}</div>
+
+<!-- Result Card -->
+<div *ngIf="result" class="result-card">
+  <div class="result-header">
+    <h2>{{result.symbol}}</h2>
+    <div class="outlook">
+      <ng-container [ngSwitch]="result.outlook">
+        <div *ngSwitchCase="'Bullish'" class="bull-animation">🐂</div>
+        <div *ngSwitchCase="'Bearish'" class="bear-animation">🐻</div>
+        <div *ngSwitchDefault class="neutral">📈📉</div>
+      </ng-container>
+      <span>{{result.outlook}}</span>
+    </div>
+  </div>
+
+  <div class="result-stats">
+    <p>Price: <span class="highlight">{{result.currentPrice}}</span></p>
+    <p>Sentiment Score: <span class="highlight">{{result.sentimentScore}}</span></p>
+    <p>Predicted 1 Month Return: <span class="highlight">{{result.predictedReturn1M}}%</span></p>
+  </div>
+
+  <h3>Key Fundamentals</h3>
+  <ul class="fundamentals">
+    <li *ngFor="let key of objectKeys(result.fundamentals)">
+      <span class="key">{{key}}:</span> {{result.fundamentals[key]}}
+    </li>
+  </ul>
+
+  <h3>Recent News</h3>
+  <ul class="news-list">
+    <li *ngFor="let n of result.news">
+      <a [href]="n.url" target="_blank">{{n.title}}</a>
+      <small>({{n.publishedAt | date:'medium'}})</small>
+    </li>
+  </ul>
+</div>
