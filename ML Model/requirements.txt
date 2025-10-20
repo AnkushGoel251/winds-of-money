@@ -1,0 +1,5 @@
+# NewsAPI key
+news.api.key=YOUR_NEWSAPI_KEY_HERE
+
+# Sentiment service URL (Python FastAPI)
+sentiment.service.url=http://localhost:5000/analyze
